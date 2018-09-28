@@ -1,0 +1,131 @@
+/*
+CREATE TABLE Person 
+(id INTEGER PRIMARY KEY AUTOINCREMENT, 
+ Name TEXT, 
+ Age INTEGER, 
+ Height INTEGER, 
+ City TEXT, 
+ FavoriteColor TEXT);
+
+INSERT INTO Person (Name,Age,Height,City,FavoriteColor)
+VALUES ("Josh",33,175,"Rochester","orange");
+
+INSERT INTO Person (Name,Age,Height,City,FavoriteColor)
+VALUES ("Scott",18,180,"Dallas","yellow");
+
+INSERT INTO Person (Name,Age,Height,City,FavoriteColor)
+VALUES ("Deirdre",27,157,"Frankfurt","red");
+
+INSERT INTO Person (Name,Age,Height,City,FavoriteColor)
+VALUES ("Cindy",20,159,"Houston","green");
+
+INSERT INTO Person (Name,Age,Height,City,FavoriteColor)
+VALUES ("Dennis",31,177,"San Diego","blue");
+
+SELECT Name,Height FROM Person ORDER BY Height DESC;
+
+SELECT Name,Height FROM Person ORDER BY Height ASC;
+
+SELECT Name,Age FROM Person ORDER BY Age DESC;
+
+SELECT Name,Age FROM Person WHERE Age > 20;
+
+SELECT Name,Age FROM Person WHERE Age = 18;
+
+SELECT Name,Age FROM Person WHERE Age < 20 OR Age > 30;
+
+SELECT Name,Age FROM Person WHERE Age != 27;
+
+SELECT Name,FavoriteColor FROM Person WHERE FavoriteColor != 'red';
+
+SELECT Name,FavoriteColor FROM Person WHERE FavoriteColor != 'red' AND FavoriteColor != 'blue';
+
+SELECT Name,FavoriteColor FROM Person WHERE FavoriteColor = "orange" OR FavoriteColor = "green";
+
+SELECT Name,FavoriteColor FROM Person WHERE FavoriteColor IN ("orange","green","blue");
+
+SELECT Name,FavoriteColor FROM Person WHERE FavoriteColor IN ("yellow","purple");
+*/
+
+/*
+CREATE TABLE Orders
+(OrderID INTEGER PRIMARY KEY AUTOINCREMENT,
+ PersonID INTEGER,
+ ProductName TEXT,
+ ProductPrice REAL,
+ Quantity INTEGER);
+ 
+INSERT INTO Orders (PersonID,ProductName,ProductPrice,Quantity)
+VALUES (1,"Computer",199.99,1);
+
+INSERT INTO Orders (PersonID,ProductName,ProductPrice,Quantity)
+VALUES (1,"Pet",99.99,2);
+
+INSERT INTO Orders (PersonID,ProductName,ProductPrice,Quantity)
+VALUES (2,"Furniture",799.99,8);
+
+INSERT INTO Orders (PersonID,ProductName,ProductPrice,Quantity)
+VALUES (3,"Book",49.99,10);
+
+INSERT INTO Orders (PersonID,ProductName,ProductPrice,Quantity)
+VALUES (4,"Rifle",149.99,33);
+
+SELECT * FROM Orders;
+
+SELECT SUM(Quantity) FROM Orders;
+
+SELECT SUM(ProductPrice*Quantity) FROM Orders;
+
+SELECT PersonID,SUM(ProductPrice*Quantity) FROM Orders GROUP BY PersonID;
+*/
+
+/*
+INSERT INTO Artist (Name)
+VALUES ("Janelle Monae");
+
+INSERT INTO Artist (Name)
+VALUES ("ALO");
+
+INSERT INTO Artist (Name)
+VALUES ("The London Souls");
+
+SELECT Name FROM Artist ORDER BY Name DESC LIMIT 10;
+
+SELECT Name FROM Artist ORDER BY Name ASC LIMIT 5;
+
+SELECT Name FROM Artist WHERE Name LIKE "Black%";
+
+SELECT Name FROM Artist WHERE Name LIKE "%Black%";
+*/
+
+/*
+SELECT FirstName,LastName FROM Employee WHERE City = "Calgary";
+
+SELECT FirstName,LastName,BirthDate FROM Employee ORDER BY Birthdate DESC LIMIT 1;
+
+SELECT FirstName,LastName,BirthDate FROM Employee ORDER BY Birthdate ASC LIMIT 1;
+
+SELECT FirstName,LastName FROM Employee 
+WHERE ReportsTo IN 
+(SELECT EmployeeId FROM Employee WHERE LastName = "Edwards" AND FirstName = "Nancy");
+
+SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
+*/
+
+/*
+SELECT BillingCountry,COUNT(*) FROM Invoice WHERE BillingCountry="USA";
+
+SELECT MAX(Total) FROM Invoice;
+
+SELECT MIN(Total) FROM Invoice;
+
+SELECT InvoiceId,Total FROM Invoice WHERE Total > 5;
+
+SELECT COUNT(*) FROM Invoice WHERE Total < 5;
+
+SELECT COUNT(*) FROM Invoice WHERE BillingState IN ("CA","TX","AZ");
+
+SELECT AVG(Total) FROM Invoice;
+
+SELECT SUM(Total) FROM Invoice;
+*/
